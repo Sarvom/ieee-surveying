@@ -10,10 +10,7 @@ favicon: /-/sarvom.github.io/ieee-surveying/favicon.ico
 
 -- fastn.auto-import: sarvom.github.io/ieee-surveying/FASTN/ds
 -- fastn.auto-import: sarvom.github.io/ieee-surveying/assets
+-- fastn.auto-import: sarvom.github.io/ieee-surveying/lib
+-- fastn.auto-import: fastn-community.github.io/roboto-typography
 -- fastn.auto-import: doc-site
 
--- fastn.sitemap:
-
-# Home: index.html
-
-- Right Sidebar Sample: /sidebar/

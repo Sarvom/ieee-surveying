@@ -1,0 +1,71 @@
+-- import: fastn-community.github.io/roboto-typography
+
+-- component page:
+children uis:
+
+-- ftd.column:
+width: fill-container
+types: $roboto-typography.types
+
+-- ftd.document:
+title: IEEE Surveying
+children: $page.uis
+
+-- end: ftd.document
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+
+
+
+
+
+
+-- component navbar:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+
+-- ftd.row:
+width: fill-container
+background.solid: #E87722
+padding.px: 16
+spacing: space-between
+
+-- ftd.column:
+padding.px: 8
+
+-- ftd.text: IEEE Surveying
+role: $inherited.types.heading-large
+
+-- ftd.text: Power to People
+role: $inherited.types.heading-small
+style: italic
+
+-- end: ftd.column
+
+-- ftd.row:
+align-self: end
+spacing.fixed.px: 24
+
+-- ftd.text: $navbar.cta-text-1
+
+-- ftd.text: $navbar.cta-text-2
+
+-- ftd.text: $navbar.cta-text-3
+
+-- ftd.text: $navbar.cta-text-4
+
+-- ftd.text: $navbar.cta-text-5
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: navbar

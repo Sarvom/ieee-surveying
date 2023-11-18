@@ -32,11 +32,20 @@ string text-1:
 string text-2:
 string text-3:
 string text-4:
+string text-1-link:
+string text-2-link:
+string text-3-link:
+string text-4-link:
 string cta-text-1:
 string cta-text-2:
 string cta-text-3:
 string cta-text-4:
 string cta-text-5:
+string cta-text-1-link:
+string cta-text-2-link:
+string cta-text-3-link:
+string cta-text-4-link:
+string cta-text-5-link:
 
 -- ftd.column:
 width: fill-container
@@ -52,18 +61,22 @@ padding-horizontal.px: 24
 -- ftd.text: $navbar.text-1
 role: $inherited.types.button-small
 color: white
+link: $navbar.text-1-link
 
 -- ftd.text: $navbar.text-2
 role: $inherited.types.button-small
 color: white
+link: $navbar.text-2-link
 
 -- ftd.text: $navbar.text-3
 role: $inherited.types.button-small
 color: white
+link: $navbar.text-3-link
 
 -- ftd.text: $navbar.text-4
 role: $inherited.types.button-small
 color: white
+link: $navbar.text-4-link
 
 -- end: ftd.row
 
@@ -99,22 +112,27 @@ align-self: end
 -- ftd.text: $navbar.cta-text-1
 role: $inherited.types.button-medium
 color: white
+link: $navbar.cta-text-1-link
 
 -- ftd.text: $navbar.cta-text-2
 role: $inherited.types.button-medium
 color: white
+link: $navbar.cta-text-2-link
 
 -- ftd.text: $navbar.cta-text-3
 role: $inherited.types.button-medium
 color: white
+link: $navbar.cta-text-3-link
 
 -- ftd.text: $navbar.cta-text-4
 role: $inherited.types.button-medium
 color: white
+link: $navbar.cta-text-4-link
 
 -- ftd.text: $navbar.cta-text-5
 role: $inherited.types.button-medium
 color: white
+link: $navbar.cta-text-5-link
 
 -- end: ftd.row
 
@@ -143,7 +161,7 @@ children items:
 width.fixed.vw: 20
 min-width.fixed.px: 256
 padding.px: 16
-border-width.px: 1
+;;border-width.px: 1
 border-color: #000000
 height: fill-container
 min-height.fixed.px: 400
@@ -234,7 +252,7 @@ children cards:
 
 -- ftd.column:
 width.fixed.vw: 60
-border-width.px: 1
+;;border-width.px: 1
 border-color: #000000
 min-height.fixed.px: 400
 padding-top.px: 24
@@ -276,7 +294,7 @@ children: $main-section.cards
 -- component carousel:
 children wrap:
 integer $active-item:
-integer max: 3
+integer max: 2
 integer min: 1
 boolean small-height: false
 
@@ -452,7 +470,9 @@ padding.px: 8
 
 -- ftd.row:
 width: fill-container
+height: fill-container
 align-content: center
+align-self: center
 
 -- ftd.text: $survey-card.title
 role: $inherited.types.heading-tiny
@@ -462,9 +482,7 @@ text-align: center
 
 -- ftd.row:
 width: fill-container
-height: fill-container
 align-content: center
-align-self: center
 
 -- ftd.text: Click Here
 role: $inherited.types.heading-tiny

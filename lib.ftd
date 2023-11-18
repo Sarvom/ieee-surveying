@@ -146,6 +146,7 @@ padding.px: 16
 border-width.px: 1
 border-color: #000000
 height: fill-container
+min-height.fixed.px: 400
 
 -- ftd.text: $sidebar.title
 if: { sidebar.title != NULL }
@@ -228,14 +229,30 @@ children: $page-section.sub-section
 
 
 -- component main-section:
+optional caption title:
 children cards:
 
 -- ftd.column:
 width.fixed.vw: 60
-background.solid: yellow
+border-width.px: 1
+border-color: #000000
+min-height.fixed.px: 400
+padding-top.px: 24
 
 -- ftd.row:
 width: fill-container
+align-content: center
+
+-- ftd.text: $main-section.title
+role: $inherited.types.heading-small
+margin-bottom.px: 8
+text-align: center
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+height: fill-container
 children: $main-section.cards
 
 -- end: ftd.row
@@ -259,22 +276,25 @@ children: $main-section.cards
 -- component carousel:
 children wrap:
 integer $active-item:
-integer max: 8
+integer max: 3
 integer min: 1
 boolean small-height: false
 
 -- ftd.column:
 width: fill-container
+height: fill-container
 align-content: center
 
 -- ftd.row:
 if: { ftd.device == "desktop" }
 width: fill-container
+height: fill-container
 padding-horizontal.px: 12
 align-content: center
 
 -- ftd.row:
 width: fill-container
+height: fill-container
 spacing.fixed.px: 24
 padding-vertical.px: 40
 padding-horizontal.px: 12
@@ -313,6 +333,7 @@ opacity: 0.5
 -- ftd.column:
 children: $carousel.wrap
 width: fill-container
+height: fill-container
 align-content: center
 padding-horizontal.px: 12
 z-index: 0
@@ -356,6 +377,7 @@ opacity: 0.5
 if: { ftd.device == "mobile"}
 children: $carousel.wrap
 width: fill-container
+height: fill-container
 padding-horizontal.px: 12
 padding-vertical.px: 2
 z-index: 0
@@ -365,3 +387,90 @@ z-index: 0
 -- end: ftd.column
 
 -- end: carousel
+
+
+
+
+
+
+
+
+
+-- component survey-section:
+optional integer index:
+optional integer reset:
+children card:
+
+-- ftd.column:
+if: { survey-section.index == survey-section.reset }
+width: fill-container
+min-height.fixed.px if { ftd.device == "desktop" }: 400
+align-content: center
+
+-- ftd.column:
+align-content: center
+margin-vertical.vh if { ftd.device == "desktop" }: 10
+margin-horizontal.px if { ftd.device == "mobile" }: 24
+margin-vertical.px if { ftd.device == "mobile" }: 32
+
+-- ftd.row:
+margin-horizontal.vw if { ftd.device == "desktop" }: 12.5
+spacing.fixed.px: 32
+align-content: center
+children: $survey-section.card
+
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: survey-section
+
+
+
+
+
+
+
+
+
+
+
+
+-- component survey-card:
+caption title:
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 360
+min-width.fixed.px: 200
+border-radius.px: 20
+background.solid: #f4f4f4
+padding.px: 8
+
+-- ftd.row:
+width: fill-container
+align-content: center
+
+-- ftd.text: $survey-card.title
+role: $inherited.types.heading-tiny
+text-align: center
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+height: fill-container
+align-content: center
+align-self: center
+
+-- ftd.text: Click Here
+role: $inherited.types.heading-tiny
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: survey-card

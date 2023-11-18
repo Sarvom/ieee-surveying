@@ -26,16 +26,18 @@ image: data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDw8QDxAQDw
 
 -- end: lib.sidebar
 
--- lib.main-section:
+-- lib.main-section: Section Surveys
 
 -- lib.carousel:
 $active-item: $current-active
 
--- lib.side-item: 2024 IEEE Aerospace Conference
-image: https://www.ieee.org/content/dam/ieee-org/ieee/web/org/homecarousel/spacecraft-launched.jpg
+-- lib.survey-section:
+index: 1
+reset: $current-active
 
--- lib.side-item: Apply for IEEE-USA government fellowships
-image: https://www.ieee.org/content/dam/ieee-org/ieee/web/org/homecarousel/us-capitol.jpg 
+-- lib.survey-section:
+index: 2
+reset: $current-active
 
 -- end: lib.carousel
 
@@ -68,7 +70,38 @@ image: https://www.ieee.org/content/dam/ieee-org/ieee/web/org/homecarousel/us-ca
 
 -- end: lib.sidebar
 
--- lib.main-section:
+-- lib.main-section: Regional Surveys
+
+-- lib.carousel:
+$active-item: $current-active
+
+-- lib.survey-section:
+index: 1
+reset: $current-active
+
+-- lib.survey-card: IEEE Kerala Survey
+
+-- lib.survey-card: IEEE Bangladesh Survey
+
+-- lib.survey-card: IEEE Srilanka Survey
+
+-- end: lib.survey-section
+
+-- lib.survey-section:
+index: 2
+reset: $current-active
+
+-- lib.survey-card: IEEE Kerala Survey
+
+-- lib.survey-card: IEEE Bangladesh Survey
+
+-- lib.survey-card: IEEE Srilanka Survey
+
+-- end: lib.survey-section
+
+-- end: lib.carousel
+
+-- end: lib.main-section
 
 -- lib.sidebar:
 
